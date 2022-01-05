@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cr-controller
+  labels:
+    app: cr-controller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cr-controller
+  template:
+    metadata:
+      labels:
+        app: cr-controller
+    spec:
+      containers:
+        - name: cr-controller
+          image: cr-controller:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8443

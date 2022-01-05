@@ -1,0 +1,31 @@
+{
+  "title": "Webhook Status Update",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": "60 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": { "host01": [ {"file": "*", "target": "/root/data"} ] }
+  },
+  "environment": {
+    "uieditorpath": "/root/data",
+    "uilayout": "editor-terminal",
+    "hidefinish": true,
+    "hideintro": true
+  },
+  "backend": {
+    "imageid": "minikube-running"
+  }
+}
